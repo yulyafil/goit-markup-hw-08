@@ -1,0 +1,19 @@
+$color-text: #757575;
+$bg-color: #f5f4fa;
+$accent-text-color: #2196f3;
+$title-text-color: #212121;
+$accent-white: #ffffff;
+$color-client-icon: #afb1b8;
+$color-footer-address: rgba(255, 255, 255, 0.6);
+$bg-link-footer: #afb1b8;
+$secondary-bg: #f5f4fa;
+$footer-bg: #2f303a;
+$primary-font-family: Roboto, sans-serif;
+$secondary-font-family: Raleway;
+$color-logo: #000000;
+
+@mixin centered-flex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}

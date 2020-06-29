@@ -1,0 +1,67 @@
+@media screen and (min-width: $mobile) {
+  .section {
+    padding: 60px 0;
+    &-fon {
+      padding: 60px 0;
+    }
+    &-title,
+    &-subtitle,
+    &-people {
+      color: $title-text-color;
+    }
+    &-title.two {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    &-text.last {
+      margin: 0;
+    }
+    &-subtitle,
+    &-lead .end {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// .section {
+//   padding: 94px 0;
+
+//   &-fon {
+//     padding: 94px 0;
+//   }
+//
+//   &-title {
+//     margin: 0;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 1.16;
+//     text-align: center;
+//     letter-spacing: 0.03em;
+//   }
+//   &-text,
+//   &-lead {
+//     margin: 0;
+//   }
+
+//   &-subtitle,
+//   &-lead .end {
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.14;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+//   }
+
+//   &-subtitle {
+//     margin-top: 0;
+//     margin-bottom: 10px;
+//   }
+//   &-title.two {
+//     margin-top: 0;
+//     margin-bottom: 50px;
+//   }
+// }

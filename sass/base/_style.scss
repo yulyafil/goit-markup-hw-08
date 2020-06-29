@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $accent-white;
+  color: $color-text;
+  text-decoration: none;
+  font-family: $primary-font-family;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  // width: 1200px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

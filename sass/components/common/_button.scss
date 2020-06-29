@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  height: 50px;
+  text-align: center;
+  border-style: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  background-color: $accent-text-color;
+  color: $accent-white;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.button.two {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 900;
+  padding: 10px 45px;
+  margin-left: 12px;
+
+  border-style: none;
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../image/iconsend.svg);
+  }
+}
