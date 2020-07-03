@@ -1,32 +1,33 @@
-@media screen and (min-width: $mobile) {
-  .section-title.work,
+@media screen and (max-width: 1199px) {
+  .section-title.works,
   .section.work,
   .work {
     display: none;
   }
 }
+@media screen and (min-width: $desktop) {
+  .work {
+    display: flex;
+    &-two {
+      width: 370px;
+      height: 294px;
+      position: relative;
+    }
+    & &-two + &-two {
+      margin-left: 30px;
+    }
+  }
+  .section-lead {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
 
-// .work {
-//   display: flex;
-//   &-two {
-//     width: 370px;
-//     height: 294px;
-//     position: relative;
-//   }
-//   & &-two + &-two {
-//     margin-left: 30px;
-//   }
-// }
-// .section-lead {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 70px;
-//   padding-top: 27px;
-//   padding-bottom: 27px;
+    text-align: center;
 
-//   text-align: center;
-
-//   color: $accent-white;
-//   background-color: rgba(47, 48, 58, 0.8);
-// }
+    color: $accent-white;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

@@ -12,7 +12,7 @@
   border-radius: 4px;
 }
 
-@media screen and (min-width: $mobile) {
+@media screen and (max-width: 767px) {
   .center-fon {
     max-width: 450px;
     height: 120px;
@@ -36,13 +36,33 @@
     }
   }
 }
-
-// .promo {
-//   @include centered-flex(inline-flex);
-//   & .center + .center {
-//     margin-left: 30px;
-//   }
-// }
+@media screen and (max-width: 1199px) and (min-width: $tablet) {
+  .promo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  & .center {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  .center-fon {
+    max-width: 354px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 1600px) and (min-width: $desktop) {
+  .promo {
+    @include centered-flex(inline-flex);
+    & .center + .center {
+      margin-left: 30px;
+    }
+  }
+  .center-fon {
+    width: 270px;
+    height: 120px;
+  }
+}
 
 // .center-fon {
 //   width: 270px;

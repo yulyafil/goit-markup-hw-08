@@ -17,41 +17,49 @@
 
   <body>
     <!-- Шапка сайта -->
-    <header class="header-portfolio">
+    <header class="page-header header-portfolio">
       <div class="container">
         <nav class="main-nav">
           <a href="./index.html" class="logo">
             <p class="logo-nav">Web <span class="logo-text">Studio</span></p>
           </a>
 
-          <ul class="site-nav list">
-            <li class="items">
-              <a href="./index.html" class="link">Студия</a>
-            </li>
-            <li class="items">
-              <a href="./portfolio.html" class="link current border-two"
-                >Портфолио</a
-              >
-            </li>
-            <li class="items"><a href="" class="link">Контакты</a></li>
-          </ul>
-
-          <div class="contact">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="contact-mail" width="16px" height="11.2px">
-                <use href="./image/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-            <a href="tel:+380961111111" class="link">
-              <svg class="contact-phone" width="10px" height="14.94px">
-                <use href="./image/sprite.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
+          <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="21" height="21" aria-label="Переключатель мобильного меню">
+              <use class="icon-cross" href="./image/sprite.svg#icon-cross"></use>
+              <use class="icon-menu" href="./image/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="site-nav list">
+              <li class="items">
+                <a href="./index.html" class="link">Студия</a>
+              </li>
+              <li class="items">
+                <a href="./portfolio.html" class="link current portfolio ">Портфолио</a>
+              </li>
+              <li class="items">
+                <a href="" class="link">Контакты</a>
+              </li>
+            </ul>
+          
+            <div class="contact">
+              <a href="mailto:info@devstudio.com" class="link">
+                <svg class="contact-mail" width="16" height="11.2">
+                  <use href="./image/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+              <a href="tel:+380961111111" class="link">
+                <svg class="contact-phone" width="10" height="14.94">
+                  <use href="./image/sprite.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </div>
           </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
     </header>
 
     <main>
@@ -83,8 +91,22 @@
           <ul class="gallery">
             <li class="add">
               <a class="img-link" href="">
+              
                 <div class="img-portfolio">
-                  <img src="./image/portfolio1.jpg" alt="Люди" width="370" />
+                  <picture>
+                    <source 
+                    srcset="./image/mobile/portfolio1-450.webp 450w,
+                           ./image/mobile/portfolio1-450@2x.webp 900w,
+                           ./image/mobile/portfolio1-450@3x.webp 1350w "
+                    type="image/webp" />
+                    <img 
+                    srcset="./image/mobile/portfolio1-450.jpg 450w
+                            ./image/mobile/portfolio1-450@2x.jpg 900w
+                            ./image/mobile/portfolio1-450@3x.webp 1350w " 
+                    src="./image/mobile/portfolio1-450.jpg" alt="Сайт"
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
+                 
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -105,11 +127,17 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img
-                    src="./image/portfolio2.jpg"
-                    alt="Баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio2-450.webp 450w,
+                                    ./image/mobile/portfolio2-450@2x.webp 900w,
+                                    ./image/mobile/portfolio2-450@3x.webp 1350w " type="image/webp" />
+                    <img srcset="./image/mobile/portfolio2-450.jpg 450w
+                                 ./image/mobile/portfolio2-450@2x.jpg 900w
+                                 ./image/mobile/portfolio2-450@3x.webp 1350w " 
+                      src="./image/mobile/portfolio2-450.jpg"
+                      alt="Баскетбол" sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
+          
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -121,7 +149,7 @@
                 </div>
 
                 <div class="add-text">
-                  <h2 class="title">Постер New Orlean vs Golden Star</h2>
+                  <h2 class="title"> New Orlean vs Golden Star</h2>
                   <p class="title-text">Дизайн</p>
                 </div>
               </a>
@@ -129,7 +157,17 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/portfolio3.jpg" alt="Рыба" width="370" />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio3-450.webp 450w,
+                                    ./image/mobile/portfolio3-450@2x.webp 900w,
+                                    ./image/mobile/portfolio3-450@3x.webp 1350w " type="image/webp" />
+                      <img srcset="./image/mobile/portfolio3-450.jpg 450w
+                                   ./image/mobile/portfolio3-450@2x.jpg 900w
+                                   ./image/mobile/portfolio3-450@3x.webp 1350w " 
+                      src="./image/mobile/portfolio3-450.jpg"
+                      alt="Рыба" sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
+                  
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -149,7 +187,16 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/prime.jpg" alt="Наушники" width="370" />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio4-450.webp 450w,
+                                    ./image/mobile/portfolio4-450@2x.webp 900w,
+                                    ./image/mobile/portfolio4-450@3x.webp 1350w " type="image/webp" />
+                       <img srcset="./image/mobile/portfolio4-450.jpg 450w
+                                    ./image/mobile/portfolio4-450@2x.jpg 900w
+                                    ./image/mobile/portfolio4-450@3x.webp 1350w "
+                       src="./image/mobile/portfolio4-450.jpg" alt="Наушники"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -169,7 +216,16 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/boxes.jpg" alt="Коробки" width="370" />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio5-450.webp 450w,
+                                    ./image/mobile/portfolio5-450@2x.webp 900w,
+                                    ./image/mobile/portfolio5-450@3x.webp 1350w " type="image/webp" />
+                       <img srcset="./image/mobile/portfolio5-450.jpg 450w
+                                    ./image/mobile/portfolio5-450@2x.jpg 900w
+                                    ./image/mobile/portfolio5-450@3x.webp 1350w "
+                      src="./image/mobile/portfolio5-450.jpg" alt="Коробки"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -189,7 +245,16 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/Borders.jpg" alt="Монитор" width="370" />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio6-450.webp 450w,
+                                    ./image/mobile/portfolio6-450@2x.webp 900w,
+                                    ./image/mobile/portfolio6-450@3x.webp 1350w " type="image/webp" />
+                       <img srcset="./image/mobile/portfolio6-450.jpg 450w
+                                    ./image/mobile/portfolio6-450@2x.jpg 900w
+                                    ./image/mobile/portfolio6-450@3x.webp 1350w "
+                      src="./image/mobile/portfolio6-450.jpg" alt="Монитор"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -209,7 +274,16 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/portfolio4.jpg" alt="Журнал" width="370" />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio7-450.webp 450w,
+                                    ./image/mobile/portfolio7-450@2x.webp 900w,
+                                    ./image/mobile/portfolio7-450@3x.webp 1350w " type="image/webp" />
+                      <img srcset=" ./image/mobile/portfolio7-450.jpg 450w
+                                    ./image/mobile/portfolio7-450@2x.jpg 900w
+                                    ./image/mobile/portfolio7-450@3x.webp 1350w "
+                      src="./image/mobile/portfolio7-450.jpg" alt="Журнал"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -229,7 +303,16 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/lab.jpg" alt="Карточка" width="370" />
+                  <picture>
+                    <source srcset="./image/mobile/portfolio8-450.webp 450w,
+                                    ./image/mobile/portfolio8-450@2x.webp 900w,
+                                    ./image/mobile/portfolio8-450@3x.webp 1350w " type="image/webp" />
+                      <img srcset=" ./image/mobile/portfolio8-450.jpg 450w
+                                    ./image/mobile/portfolio8-450@2x.jpg 900w
+                                    ./image/mobile/portfolio8-450@3x.webp 1350w "
+                      src="./image/mobile/portfolio8-450.jpg" alt="Ярлык"
+                      sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                  </picture>
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -249,7 +332,16 @@
             <li class="add">
               <a class="img-link" href="">
                 <div class="img-portfolio">
-                  <img src="./image/business.jpg" alt="Ноутбук" width="370" />
+                <picture>
+                  <source srcset="./image/mobile/portfolio9-450.webp 450w,
+                                  ./image/mobile/portfolio9-450@2x.webp 900w,
+                                  ./image/mobile/portfolio9-450@3x.webp 1350w " type="image/webp" />
+                    <img srcset=" ./image/mobile/portfolio9-450.jpg 450w
+                                  ./image/mobile/portfolio9-450@2x.jpg 900w
+                                  ./image/mobile/portfolio9-450@3x.webp 1350w "
+                    src="./image/mobile/portfolio9-450.jpg" alt="Ноутбук"
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768) 50vw, 100vw " />
+                </picture>
                   <div class="img-overlay">
                     <p class="title-texts">
                       Технокряк это современная площадка распространения
@@ -274,7 +366,8 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container page-footer">
-        <div class="footer-address">
+        <div class="footer-content">
+         <div class="footer-address">
           <a href="./index.html" class="logo">
             <p class="logo-nav two">
               Web <span class="logo-text-footer">Studio</span>
@@ -284,10 +377,8 @@
             г. Киев, пр-т Леси Украинки, 26
           </address>
           <address class="address-secondary mail">
-            info@example.com 
-          </address>
-          <address class="address-secondary">
-            +38 099 111 11 11
+            <p class="address-secondary mail">info@example.com</p>
+            <p class="address-secondary tel">+38 099 111 11 11</p>
           </address>
         </div>
 
@@ -326,19 +417,24 @@
             </li>
           </ul>
         </div>
+      </div>
 
         <form class="form-footer js-speaker-form">
+          <label class="label-footer">
           <div class="footer-text">
             <b class="end footer-end">ПОДПИШИТЕСЬ НА РАССЫЛКУ </b>
           </div>
           <div class="form-email">
             <input type="email" name="mail" id="mail" placeholder="E-mail" />
-            <button type="submit" class="button two">Подписаться</button>
           </div>
+           <button type="submit" class="button two">Подписаться</button>
+          </label>
         </form>
       </div>
 
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

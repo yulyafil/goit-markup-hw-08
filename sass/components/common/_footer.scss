@@ -5,12 +5,11 @@
   &-link {
     display: inline-block;
     margin-left: 65px;
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: 767px) {
       margin-left: 0;
       margin-bottom: 60px;
     }
   }
-
   &-end,
   &-text {
     margin-top: 0;
@@ -31,6 +30,25 @@
   padding-bottom: 60px;
   padding-left: 0;
   padding-right: 0;
+  @media screen and (min-width: $tablet) {
+    height: 463px;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-bottom: 60px;
+    @media screen and (min-width: $desktop) {
+      margin: 0;
+    }
+  }
+  .label-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .logo-text-footer {
@@ -38,7 +56,7 @@
 }
 .logo-nav.two {
   margin-right: 0;
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
 }
@@ -49,25 +67,31 @@
 //   line-height: 1.71;
 //   letter-spacing: 0.03em;
 // }
+@media screen and (min-width: $desktop) {
+  .page-footer {
+    // position: relative;
+    display: flex;
+    align-items: baseline;
+    height: 252px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .label-footer {
+    position: relative;
+    display: flex;
 
-// .page-footer {
-//   position: relative;
-//   display: flex;
-//   align-items: baseline;
-//   height: 252px;
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-//   padding-left: 0;
-//   padding-right: 0;
-
-//   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-// }
+    // flex-direction: row;
+    // flex-direction: column;
+    // align-items: center;
+  }
+}
 
 .address-primary {
   font-style: normal;
-
   margin-bottom: 9px;
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 8px;
   }
 }
@@ -79,14 +103,14 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
 
   .mail {
     margin-top: 0;
     margin-bottom: 9px;
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 8px;
     }
   }
@@ -123,13 +147,16 @@
 }
 .form-footer {
   @media screen and (min-width: $mobile) {
-    margin-left: 0;
+    margin: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
   }
   @media screen and (min-width: $desktop) {
-    margin-left: 92px;
+    margin-left: 94px;
   }
   & input {
-    // width: 358px;
     max-width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -137,17 +164,29 @@
     border-radius: 4px;
     background-color: $footer-bg;
     padding: 18px 12px;
-    @media screen and (min-width: $mobile) {
+    @media screen and (max-width: 1199px) {
       width: 450px;
       padding: 15px 16px;
       margin-bottom: 20px;
     }
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin: 0;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .form-email {
+    display: flex;
+  }
+  .button.two {
+    margin: 0;
+    position: absolute;
+    right: -242px;
+    bottom: 0;
   }
 }
 
-// .form-email {
-//   display: flex;
-// }
 .form-email input::placeholder {
   font-size: 16px;
   line-height: 1.87;
@@ -158,10 +197,3 @@
 .button.two {
   margin: 0;
 }
-
-// .footer-button {
-//   display: inline-flex;
-
-//   right: 0;
-//   bottom: 0;
-// }

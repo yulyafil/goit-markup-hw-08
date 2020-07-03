@@ -2,15 +2,23 @@
   margin-top: 0;
   margin-bottom: 50px;
   text-align: center;
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
 }
 .logos {
-  display: flex;
+  @include centered-flex();
   flex-wrap: wrap;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    @include centered-flex(inline-flex);
+  }
+}
+@media screen and (min-width: $desktop) {
+  .logos .pic + .pic {
+    margin-left: 30px;
   }
 }
 .pic {
@@ -23,6 +31,14 @@
   @media screen and (max-width: 767px) {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+    margin: 0;
   }
   &:hover {
     fill: $accent-text-color;

@@ -15,15 +15,29 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body>
+  <body.mobal-open>
     <!-- Шапка сайта -->
-    <header>
+    <header class="page-header">
       <div class="container">
         <nav class="main-nav">
           <a href="./index.html" class="logo">
             <p class="logo-nav">Web <span class="logo-text">Studio</span></p>
           </a>
 
+        <button 
+          type="button" 
+          class="menu-button" 
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button>
+        <svg width="21" height="21"
+             aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./image/sprite.svg#icon-cross"></use>
+            <use class="icon-menu" href="./image/sprite.svg#icon-menu"></use>
+            </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu > 
           <ul class="site-nav list">
             <li class="items">
               <a href="./index.html" class="link current border">Студия</a>
@@ -35,7 +49,7 @@
               <a href="" class="link">Контакты</a>
             </li>
           </ul>
-
+          
           <div class="contact">
             <a href="mailto:info@devstudio.com" class="link">
               <svg class="contact-mail" width="16" height="11.2">
@@ -47,9 +61,9 @@
               <svg class="contact-phone" width="10" height="14.94">
                 <use href="./image/sprite.svg#icon-phone"></use>
               </svg>
-              +38 096 111 11 11</a
-            >
+              +38 096 111 11 11</a>
           </div>
+        </div>
         </nav>
       </div>
     </header>
@@ -126,9 +140,9 @@
         </div>
       </section>
 
-      <section class="section work">
+      <section class="section-work">
         <div class="container">
-          <h2 class="section-title work">Чем мы занимаемся</h2>
+          <h2 class="section-title works">Чем мы занимаемся</h2>
 
           <ul class="work">
             <li class="work-two">
@@ -176,16 +190,14 @@
           <ul class="team">
             <li class="member">
               <div class="thumb">
-                <img
-                  class="img"
-                  srcset="
-                    ./image/Nikolay-450.jpg    1x,
-                    ./image/Nikolay-450@2x.jpg 2x
-                  "
-                  src="./image/Nikolay-450.jpg"
-                  alt="Николай"
-                  width="450"
-                />
+                <img class="img"
+                srcset="
+                  ./image/Nikolay-450.jpg    1x,
+                  ./image/Nikolay-450@2x.jpg 2x,
+                  ./image/Nikolay-450@3x.jpg 3x
+                " 
+                src="./image/Nikolay-450.jpg" 
+                alt="Николай"/>
               </div>
 
               <h3 class="section-people">Николай Кучеренко</h3>
@@ -239,7 +251,9 @@
               <div class="thumb">
                 <img
                   class="img"
-                  srcset="./image/Olga-450.jpg 1x, ./image/Olga-450@2x.jpg 2x"
+                  srcset="./image/Olga-450.jpg 1x,
+                          ./image/Olga-450@2x.jpg 2x,
+                          ./image/Olga-450@3x.jpg 3x "
                   src="./image/Olga-450.jpg"
                   alt="Ольга"
                   width="450"
@@ -298,7 +312,8 @@
                   class="img"
                   srcset="
                     ./image/Andrey-450.jpg    1x,
-                    ./image/Andrey-450@2x.jpg 2x
+                    ./image/Andrey-450@2x.jpg 2x,
+                    ./image/andrey-450@3x.jpg 3x
                   "
                   src="./image/Andrey-450.jpg"
                   alt="Андрей"
@@ -357,7 +372,9 @@
               <div class="thumb">
                 <img
                   class="img"
-                  srcset="./image/Ivan-450.jpg 1x, ./image/Ivan-450@2x.jpg 2x"
+                  srcset="./image/Ivan-450.jpg 1x,
+                          ./image/Ivan-450@2x.jpg 2x,
+                          ./image/Ivan-450@3x.jpg 3x "
                   src="./image/Ivan-450.jpg"
                   alt="Иван"
                   width="450"
@@ -517,7 +534,7 @@
               />
               <span class="icon-check"></span>
 
-              <span>
+              <span class="text-policy">
                 Соглашаюсь с рассылкой и принимаю
                 <a class="check-text" href="">Условия договора</a></span
               >
@@ -539,66 +556,72 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container page-footer">
-        <div class="footer-address">
-          <a href="./index.html" class="logo">
-            <p class="logo-nav two">
-              Web <span class="logo-text-footer">Studio</span>
+        <div class="footer-content">
+          <div class="footer-address">
+            <a href="./index.html" class="logo">
+              <p class="logo-nav two">
+                Web <span class="logo-text-footer">Studio</span>
+              </p>
+            </a>
+            <address class="address-primary">
+              г. Киев, пр-т Леси Украинки, 26
+            </address>
+            <address class="address-secondary">
+              <p class="address-secondary mail">info@example.com</p>
+              <p class="address-secondary tel">+38 099 111 11 11</p>
+            </address>
+          </div>
+          
+          <div class="footer-link">
+            <p class="footer-end link">
+              <b class="end">ПРИСОЕДИНЯЙТЕСЬ</b>
             </p>
-          </a>
-          <address class="address-primary">
-            г. Киев, пр-т Леси Украинки, 26
-          </address>
-          <address class="address-secondary">
-            <p class="address-secondary mail">info@example.com</p>
-            <p class="address-secondary tel">+38 099 111 11 11</p>
-          </address>
+          
+            <ul class="inline">
+              <li>
+                <a class="inline-link" href="" aria-label="cсылка на Instagram">
+                  <svg class="inline-icon">
+                    <use href="./image/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="inline-link" href="" aria-label="ссылка на Twitter">
+                  <svg class="inline-icon">
+                    <use href="./image/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="inline-link" href="" aria-label="ссылка на Facebook">
+                  <svg class="inline-icon">
+                    <use href="./image/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="inline-link" href="" aria-label="ссылка на LinkedIn">
+                  <svg class="inline-icon">
+                    <use href="./image/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div class="footer-link">
-          <p class="footer-end link">
-            <b class="end">ПРИСОЕДИНЯЙТЕСЬ</b>
-          </p>
-
-          <ul class="inline">
-            <li>
-              <a class="inline-link" href="" aria-label="cсылка на Instagram">
-                <svg class="inline-icon">
-                  <use href="./image/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="inline-link" href="" aria-label="ссылка на Twitter">
-                <svg class="inline-icon">
-                  <use href="./image/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="inline-link" href="" aria-label="ссылка на Facebook">
-                <svg class="inline-icon">
-                  <use href="./image/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="inline-link" href="" aria-label="ссылка на LinkedIn">
-                <svg class="inline-icon">
-                  <use href="./image/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
+        
+       
         <form class="form-footer js-speaker-form">
-          <div class="footer-text">
-            <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ </b>
-          </div>
-          <div class="form-email">
-            <input type="email" name="mail" id="mail" placeholder="E-mail" />
+          <label class="label-footer" >
+            <div class="footer-text">
+              <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ </b>
+            </div>
+            <div class="form-email">
+              <input type="email" name="mail" id="mail" placeholder="E-mail" />
+            </div>
             <button type="submit" class="button two">Подписаться</button>
-          </div>
+          </label>
+         
         </form>
       </div>
     </footer>

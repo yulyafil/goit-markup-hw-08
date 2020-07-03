@@ -5,8 +5,43 @@
 .contact {
   margin-left: auto;
   display: inline-flex;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-  & .link + .link {
+@media screen and (max-width: 1199px) and (min-width: $tablet) {
+  .contact .link {
+    font-size: 12px;
+  }
+  .contact {
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contact .link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    padding-bottom: 60px;
+  }
+
+  .contact .link:not(:last-child) {
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .contact .link + .link {
     margin-left: 30px;
   }
 }
@@ -14,8 +49,6 @@
 .contact .link {
   display: inline-flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   &:hover,
   &:focus {
@@ -23,6 +56,7 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
 .contact-mail,
 .contact-phone {
   margin-right: 10px;
@@ -33,10 +67,4 @@
 .contact-phone:hover {
   fill: $accent-text-color;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: $mobile) {
-  .contact {
-    display: none;
-  }
 }
