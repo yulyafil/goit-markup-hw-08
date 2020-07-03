@@ -20,7 +20,7 @@
   display: block;
   text-decoration: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: $mobile) {
   .add {
     width: 100%;
     margin-right: 0;
@@ -29,7 +29,7 @@
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: $tablet) {
   .add {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;

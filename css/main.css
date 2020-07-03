@@ -1302,7 +1302,7 @@ body.modal-open {
   text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .add {
     width: 100%;
     margin-right: 0;
@@ -1312,7 +1312,7 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .add {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
